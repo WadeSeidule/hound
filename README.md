@@ -5,6 +5,8 @@
 ### SSH Auth
 In `./run.sh` you must put the path of the private ssh key which pairs to one connected in your github account. 
 
+Ex. `SSH_KEY_PATH=~/.ssh/id_ed25519`
+
 Hound automatically pulls down and checks for changes from github. Its needs the ssh key for github auth.
 
 ### Repo Config
