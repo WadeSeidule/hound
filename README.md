@@ -1,10 +1,18 @@
 # Hound
 
-[![Build Status](https://travis-ci.org/hound-search/hound.svg?branch=master)](https://travis-ci.org/hound-search/hound)
-[![.github/workflows/go.yaml](https://github.com/hound-search/hound/workflows/.github/workflows/go.yaml/badge.svg)](https://github.com/hound-search/hound/actions)
+## Wade Quickstart: 
 
-> ## :warning: Hound's default branch name has changed! :warning:
-> **We renamed our default branch from `master` to `main` on February 24, 2021**. We used [Github's branch renaming feature](https://github.com/github/renaming/#renaming-existing-branches), which means that any open pull requests should be automatically re-targeted, and web requests pointing to code on the `master` branch should redirect as expected. This change should mostly be invisible, but you will need to update any code that explicitly relies on the existence of Hound's `master` branch.
+### SSH Auth
+In `./run.sh` you must put the path of the private ssh key which pairs to one connected in your github account. 
+
+Hound automatically pulls down and checks for changes from github. Its needs the ssh key for github auth.
+
+### Repo Config
+Repo configuration can be found in `./config.json`. Add any repo under the repos key and give the name and ssh clone url. 
+
+Under `vcs-config.git.ref` you can specify what branch you want hound to index. 
+
+***
 
 Hound is an extremely fast source code search engine. The core is based on this article (and code) from Russ Cox:
 [Regular Expression Matching with a Trigram Index](http://swtch.com/~rsc/regexp/regexp4.html). Hound itself is a static
