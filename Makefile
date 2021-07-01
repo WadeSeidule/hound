@@ -47,7 +47,7 @@ clean:
 
 run:
 	chmod +x ./run.sh
-	./run.sh
+	./run.sh $(SSH_KEY_PATH)
 
 teardown:
 	chmod +x ./teardown.sh

@@ -2,12 +2,15 @@
 
 ## Wade Quickstart: 
 
-### SSH Auth
-In `./run.sh` you must put the path of the private ssh key which pairs to one connected in your github account. 
-
-Ex. `SSH_KEY_PATH=~/.ssh/id_ed25519`
+### Running Hound
+To run just clone the repo and run the following command in the terminal. `make run SSH_KEY_PATH=~/.ssh/id_ed25519`
 
 Hound automatically pulls down and checks for changes from github. Its needs the ssh key for github auth.
+
+I recommend adding this command to you bash profile to start up hound from any directory:
+```
+alias run_hound="make -C ~/path/to/hound run SSH_KEY_PATH=~/path/to/key 
+```
 
 ### Repo Config
 Repo configuration can be found in `./config.json`. Add any repo under the repos key and give the name and ssh clone url. 
