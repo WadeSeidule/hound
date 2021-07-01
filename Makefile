@@ -44,3 +44,11 @@ lint:
 
 clean:
 	rm -rf .build node_modules
+
+run:
+	chmod +x ./run.sh
+	./run.sh
+
+teardown:
+	chmod +x ./teardown.sh
+	./teardown.sh

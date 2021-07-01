@@ -1,0 +1,1 @@
+docker stop hound && docker rm hound

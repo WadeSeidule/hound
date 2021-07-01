@@ -15,6 +15,15 @@ RUN apk update \
 
 VOLUME ["/data"]
 
+# ssh config
+RUN mkdir -p /root/.ssh/
+RUN touch /root/.ssh/known_hosts
+ARG SSH_KEY
+RUN echo "$SSH_KEY" > /root/.ssh/id_ed25519
+RUN chmod 600 /root/.ssh/id_ed25519
+# COPY ./id_ed25519 /root/.ssh/
+RUN ssh-keyscan github.com >> ~/.ssh/known_hosts
+
 EXPOSE 6080
 
 ENTRYPOINT ["/sbin/tini", "--", "/go/bin/houndd", "-conf", "/data/config.json"]

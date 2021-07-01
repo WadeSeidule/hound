@@ -1,0 +1,35 @@
+{
+    "max-concurrent-indexers" : 2,
+    "dbpath" : "db",
+    "title" : "Hound",
+    "health-check-uri" : "/health",
+    "vcs-config" : {
+        "git": {
+            "ref": "dev_stable"
+        }
+    },
+    "repos" : {
+        "janus" : {
+            "url" : "git@github.com:Hyperfine/janus.git"
+        },
+        "cloud-provisioned-accounts" : {
+            "url": "git@github.com:Hyperfine/cloud-provisioned-accounts.git"
+        },
+        "purview-connector" : {
+            "url": "git@github.com:Hyperfine/purview-connector.git"
+        },
+        "purview-ee-test": {
+            "url": "git@github.com:Hyperfine/purview-ee-test.git"
+        },
+        "romana": {
+            "url": "git@github.com:Hyperfine/romana.git"
+        },
+        "cloudcore": {
+            "url": "git@github.com:Hyperfine/cloudcore.git"
+        },
+        "purview-health-check": {
+            "url": "git@github.com:Hyperfine/purview-health-check.git"
+        }
+	}
+        
+}
