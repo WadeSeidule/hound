@@ -29,6 +29,15 @@
         },
         "purview-health-check": {
             "url": "git@github.com:Hyperfine/purview-health-check.git"
+        },
+        "indigen": {
+            "url": "git@github.com:Hyperfine/indigen.git"
+        },
+        "pyHFS": {
+            "url": "git@github.com:Hyperfine/pyHFS.git"
+        },
+        "account-manager": {
+            "url": "git@github.com:Hyperfine/account-manager.git"
         }
 	}
         
